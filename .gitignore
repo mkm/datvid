@@ -6,3 +6,4 @@
 *.snm
 *.toc
 *.synctex.gz
+.DS_Store
