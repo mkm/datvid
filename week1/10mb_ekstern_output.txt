@@ -1,0 +1,83 @@
+10mb Ekstern
+
+DrJekyll:week1 ralleab$ ./test.sh 
+
+real    0m1.463s
+user    0m0.001s
+sys     0m0.046s
+
+real    0m1.460s
+user    0m0.001s
+sys     0m0.049s
+
+real    0m1.507s
+user    0m0.001s
+sys     0m0.047s
+
+real    0m1.687s
+user    0m0.001s
+sys     0m0.043s
+
+real    0m1.400s
+user    0m0.001s
+sys     0m0.044s
+
+real    0m1.444s
+user    0m0.001s
+sys     0m0.043s
+
+real    0m1.372s
+user    0m0.001s
+sys     0m0.051s
+
+real    0m1.382s
+user    0m0.001s
+sys     0m0.050s
+
+real    0m1.417s
+user    0m0.001s
+sys     0m0.044s
+
+real    0m1.397s
+user    0m0.001s
+sys     0m0.044s
+
+real    0m1.439s
+user    0m0.000s
+sys     0m0.044s
+
+real    0m1.362s
+user    0m0.001s
+sys     0m0.047s
+
+real    0m1.476s
+user    0m0.001s
+sys     0m0.052s
+
+real    0m1.548s
+user    0m0.001s
+sys     0m0.050s
+
+real    0m1.495s
+user    0m0.001s
+sys     0m0.049s
+
+real    0m1.517s
+user    0m0.001s
+sys     0m0.043s
+
+real    0m1.440s
+user    0m0.001s
+sys     0m0.043s
+
+real    0m1.463s
+user    0m0.000s
+sys     0m0.043s
+
+real    0m1.371s
+user    0m0.001s
+sys     0m0.044s
+
+real    0m1.356s
+user    0m0.001s
+sys     0m0.043s
