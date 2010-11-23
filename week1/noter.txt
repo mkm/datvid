@@ -1,0 +1,8 @@
+dd if=/dev/urandom of=10mb count=20480
+time cp 10mb ask/
+
+real    0m1.780s
+user    0m0.001s
+sys     0m0.091s
+
+
