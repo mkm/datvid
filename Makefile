@@ -1,6 +1,6 @@
 
 
-WEEKS=wek0
+WEEKS=wek0 wek1
 
 all : $(WEEKS)
 
