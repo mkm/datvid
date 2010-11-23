@@ -12,12 +12,25 @@
 \section{Eksperimentdesign}
 
 \subsection{Tidsmåling}
-
+Tid måles med et ur. Til forsøget vil UNIX-programmet {\tt time} blive brugt til at tage tid på hvor hurtigt en fil af given størrelse kan overføres lokalt og over netværket.
 \subsection{Realisme}
+
 
 \subsection{Andre Parametre}
 
+\begin{itemize}
+	\item Aktivitet på kilde- og destinationscomputeren, som vil formindske overførselshastigheden.
+	\item Til forsøget vil {\tt sshfs} blive benyttet til at montere en ekstern disk. Dette benytter sig af {\tt ssh} som krypterer forbindelsen, hvilket kræver en del regnekraft som i visse tilfælde kan give en flaskehals.
+	\item Selve netværket kan også være en flaskehals, hvis det er for langsomt.
+	\item Filen, som skal overføres til destinationen kan være gemt i cachen på kildedisken.
+\end{itemize}
+
 \subsection{Tese}
+Båndbredden der er tilgængelig over nettet er langt højere end båndbredden fra en harddisk. Hvis man læser tilstrækkeligt store filer er der derfor igen forskel på at bruge en lokal eller en netværksforbundet harddisk.
+
+%Hvis man skriver, det modsatte af hvad vi skal øhh.. Hvis man skriver fr.. Op imod 100 megabyte til en lokalforbundet harddisk, jeg har lige sat mig op til at bruge henholdsvis på den grimme måde. lalala du er bare så sjov så skriver du bare alt hvad jeg siger.. Ikke hvad.. (kigger). Goldy locks, er der nogen der har kaldt dig det? (stønner gennem næsen). Lolling. Hæææææææhæ.  Kan du ikke lige sådan slette det meste af det?
+
+Hvis man skriver op imod 100 megabyte til henholdsvis en lokalforbundet harddisk og en netværksforbundet harddisk.
 
 \section{Implementation}
 
@@ -31,7 +44,7 @@
 
 \subsubsection{ii}
 
-\section{Ræssonation}
+\section{Ræssonnering}
 
 \subsection{a}
 \subsection{b}
