@@ -2,8 +2,8 @@
 
 use Time::HiRes;
 
-$srcfile = "dinmor";
-$destfile = "minmor";
+$srcfile = "janniks_mor";
+$destfile = "~/ask";
 
 open (DATAFILE, '>testdata');
 open (AGGRFILE, '>testaggr');
