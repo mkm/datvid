@@ -37,15 +37,19 @@ Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperime
 Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
 
 \subsubsection{CPU som flaskehals}
-Din mor er en flaskehals.
+Ved overførsel over netværk kan CPU'en agere flaskehals. For eksempel ved benyttelse af \tt{sshfs} benyttes CPU-intensiv kryptering som kan begrænse hastigheden af overførslen.
+
 \subsubsection{Hardware}
-Hardware er en faktor.
+Harddiske, netværkskort, bundkort og CPU er alle en faktor, som kan have noget at sige for hastighederne.
+
 \subsubsection{Netværksbelastning}
-Oh noes!
+Belastning på netværket vil formindske båndbredden på det givne tidspunkt og derved forværre den eksterne disks overførselstider.
+
 \subsubsection{Andre processor/forstyrrelser}
-Usikkerhed ved styresystem med videre.
+Moderne operativsystemer er hele tiden i gang med ting i baggrunden som for eksempel løbende defragmentering. Alt dette er med til at lave støj i resultaterne.
+
 \subsubsection{Netværksudstyr (firewall / router)}
-Det må da have noget at sige!
+Netværksudstyr er forskelligt og ikke lige hurtigt/stabilt så det er også en faktor i resultaterne.
 
 % 1.d
 \subsection{Tese}
