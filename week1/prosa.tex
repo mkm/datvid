@@ -49,9 +49,6 @@ Belastning på netværket vil formindske båndbredden på det givne tidspunkt og
 \item Andre processor/forstyrrelser \\
 Moderne operativsystemer er hele tiden i gang med ting i baggrunden som for eksempel løbende defragmentering. Alt dette er med til at lave støj i resultaterne.
 
-\item Netværksudstyr (firewall / router) \\
-Netværksudstyr er forskelligt og ikke lige hurtigt/stabilt så det er også en faktor i resultaterne.
-
 \end{itemize}
 
 % 1.d
@@ -108,14 +105,16 @@ Hvorfor skulle det hjælpe med større filer?
 \section{Ræssonnering}
 
 % 3.a
-\subsection{a}
+\subsection{Afstand}
 Forøget afstand mellem disk og maskine har flere konsekvenser. Jo længere afstand, des større sandsynlighed for at en sendt pakke bliver tabt undervejs. Derudover bliver latenstiden højere hvilket kombineret med det tidligere gør at båndbredden bliver meget lavere.
 
 % 3.b
-\subsection{b}
+\subsection{Netværksudstyr}
+Netværksudstyr, som router og firewall, er alt sammen med til at tilføje yderligere kompleksitet og forsinkelse.
 
 % 3.c
-\subsection{c}
+\subsection{Samba}
+I mellemtiden har vi fundet ud af at Samba ikke er særligt optimalt til filoverførsel. Dette har været med til at vise at en overførsel over netværk er meget langsommere end en lokal overførsel.
 
 \section{Perspektivering i forhold til artikler}
 
