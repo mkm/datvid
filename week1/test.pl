@@ -1,13 +1,9 @@
 #!/usr/bin/perl
-
 use Time::HiRes;
-
 $srcfile = "janniks_mor";
-$destfile = "~/ask";
-
+$destfile = "/tmp";
 open (DATAFILE, '>testdata');
 open (AGGRFILE, '>testaggr');
-
 for ($size = 5; $size <= 120; $size += 5) {
     print "Size: $size\n";
     print DATAFILE "Size: $size\n";
@@ -25,6 +21,4 @@ for ($size = 5; $size <= 120; $size += 5) {
     print DATAFILE "Average: $total\n\n";
     print AGGRFILE "$total\n";
 }
-
 close (DATAFILE);
-
