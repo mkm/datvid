@@ -26,6 +26,9 @@ I alle moderne operativsystemer opererer filsystemet med en cache, således at e
 
 Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
+\subsubsection{Filsystem}
+Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
+
 \subsection{Tese}
 Båndbredden over netværk er langt højere end båndbredden til en harddisk så hvis man skriver tilstrækkeligt store filer til en disk vil der ikke være forskel på skrivehastigheden mellem en netværksforbundet og en lokal harddisk.\\
 $$ $$
