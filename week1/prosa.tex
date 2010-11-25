@@ -1,14 +1,19 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{verbatim}
 \pagestyle{fancyplain}
-\author{Mikkel, Jannik, Rune \& Rasmus}
+\author{Mikkel Kragh Mathiesen, Jannik Gram, Rune \& Rasmus Abrahams{\tt (son|en)}}
+\title{Oplæg 2: Design af eksperimenter}
 \date{\today}
 \lhead{Mikkel, Jannik, Rune \& Rasmus}
 \rhead{\today}
 \begin{document}
+
+\maketitle
+
+\tableofcontents
 
 \section{Eksperimentdesign}
 
@@ -27,9 +32,7 @@ I alle moderne operativsystemer opererer filsystemet med en cache, således at e
 Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
 \subsection{Tese}
-Båndbredden over netværk er langt højere end båndbredden til en harddisk så hvis man skriver tilstrækkeligt store filer til en disk vil der ikke være forskel på skrivehastigheden mellem en netværksforbundet og en lokal harddisk.\\
-$$ $$
-Bemærk: Der vil blive målt skrivninger og ikke læsninger.
+Båndbredden over netværk er langt højere end båndbredden til en harddisk så hvis man skriver tilstrækkeligt store filer til en disk vil der ikke være forskel på skrivehastigheden mellem en netværksforbundet og en lokal harddisk. Bemærk dog at der vil blive målt skrivninger og ikke læsninger.
 
 \section{Implementation}
 
