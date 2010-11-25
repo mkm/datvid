@@ -44,7 +44,7 @@ Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperime
 Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
 
 \subsubsection{CPU som flaskehals}
-Ved overførsel over netværk kan CPU'en agere flaskehals. For eksempel ved benyttelse af {\tt sshfs} benyttes CPU-intensiv kryptering som kan begrænse hastigheden af overførslen.
+Ved overførsel over netværk kan CPU'en virke som flaskehals. For eksempel ved benyttelse af {\tt sshfs} benyttes CPU-intensiv kryptering som kan begrænse hastigheden af overførslen.
 
 \subsubsection{Hardware}
 Harddiske, netværkskort, bundkort og CPU er alle en faktor, som kan have noget at sige for hastighederne.
