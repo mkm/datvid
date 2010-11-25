@@ -1,4 +1,4 @@
-all : prosa.pdf
+all : prosa.pdf presentation.pdf
 
 %.pdf : %.tex
 	pdflatex $<
