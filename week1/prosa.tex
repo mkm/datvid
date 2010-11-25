@@ -65,12 +65,12 @@ Båndbredden over netværk er langt højere end båndbredden til en harddisk så
 % 2.a
 \subsection{Omstændigheder}
 
-Et Perl-script (se figur \ref{ploto}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret vha. Samba.
+Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret vha. Samba.
 
 \begin{figure}
 	\includegraphics[width=4in]{kode.png}
 	\caption{Perl-scriptet}
-	\label{ploto}
+	\label{kode}
 \end{figure}
 
 % 2.b
