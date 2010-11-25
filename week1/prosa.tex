@@ -91,19 +91,9 @@ På figur \ref{ploto} ses en graf for, hvor lang tid filerne af forskellige stø
 
 % 2.c
 \subsection{Teseoverlevelse}
-Under antagelse af at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant.
+Under antagelse af at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant. Det er svært tænkeligt at endnu større filer vil ændre på dette, da netværksaktivitet alligevel bliver brudt op i pakker, der sendes hver for sig.
 
-\textit{Alt andet lige holder tesen ikke.}
-Overførslen til en lokal harddisk er op til dobbelt så hurtig som til en harddisk på et lokalt netværk.
-Det er muligt at det vil se anderledes ud med større filer, men ingen tendens.
-Ændre rækkefølge på tests så der alterneres mellem størrelser på de overførte filer frem for at der uploades hver størrelse 10 gange efter hinanden.
-Hvorfor skulle det hjælpe med større filer?
-
-% 2.c.i
-\subsubsection{i}
-
-% 2.c.ii
-\subsubsection{ii}
+Antagelsen om eksperimentets holdbarhed er dog ikke helt berettiget. Der er en del usikkerhed, hvoraf kun en delmængde er blevet taget hånd om. Derfor vil det give god mening at undersøge om uønskede faktorer fremprovokerede et falsk negativ. De mest umiddelbare tiltag er at bruge et netværksfilsystem af nyere dato og at finjustere blokstørrelsen til kopiering.
 
 % 3
 \section{Ræssonnement}
@@ -124,6 +114,8 @@ I mellemtiden har vi fundet ud af at Samba ikke er særligt optimalt til filover
 
 Stewart er netop frustreret over en mangel på sådan rigid opstillelse af teser og be- eller akræftning af disse. Han ville derfor formentlig acceptere vores grundlæggende metode og kalde det \textit{computer science}, omend vores udførsel og faktiske planlægning af eksperimentet efterlader noget at ønske. Han synes at gå ind for Poppers forudsætninger for videnskab, som kræver formelle og falsificerbare teser og rig mulighed for ekstern afprøvning/bekræftelse. Vores eksperiment er i teorien replikerbart, men i praksis er det ikke tilnærmelsesvist grundigt nok dokumenteret: det brugte hardware er ikke specificeret, og eksempelvis netværk har en masse usikkerhed, der ikke er taget højde for.   
 
+Denning: ``Computing is no longer a science of just the artificial. It is the study of information processes, natural and artificial.''
 
+Denning mener at datalogi er videnskab i modsætning til Stewart.
 
 \end{document}
