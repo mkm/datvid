@@ -90,19 +90,9 @@ På figur \ref{ploto} ses en graf for, hvor lang tid filerne af forskellige stø
 
 % 2.c
 \subsection{Teseoverlevelse}
-Under antagelse af at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant.
+Under antagelse af at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant. Det er svært tænkeligt at endnu større filer vil ændre på dette, da netværksaktivitet alligevel bliver brudt op i pakker, der sendes hver for sig.
 
-\textit{Alt andet lige holder tesen ikke.}
-Overførslen til en lokal harddisk er op til dobbelt så hurtig som til en harddisk på et lokalt netværk.
-Det er muligt at det vil se anderledes ud med større filer, men ingen tendens.
-Ændre rækkefølge på tests så der alterneres mellem størrelser på de overførte filer frem for at der uploades hver størrelse 10 gange efter hinanden.
-Hvorfor skulle det hjælpe med større filer?
-
-% 2.c.i
-\subsubsection{i}
-
-% 2.c.ii
-\subsubsection{ii}
+Antagelsen om eksperimentets holdbarhed er dog ikke helt berettiget. Der er en del usikkerhed, hvoraf kun en delmængde er blevet taget hånd om. Derfor vil det give god mening at undersøge om uønskede faktorer fremprovokerede et falsk negativ. De mest umiddelbare tiltag er at bruge et netværksfilsystem af nyere dato og at finjustere blokstørrelsen til kopiering.
 
 % 3
 \section{Ræssonnement}
