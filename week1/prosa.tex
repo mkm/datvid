@@ -12,6 +12,8 @@
 
 \section{Eksperimentdesign}
 
+Et Perl-script genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret vha. Samba.
+
 \subsection{Tidsmåling}
 
 \subsection{Realisme}
@@ -62,14 +64,7 @@ Bemærk: Der vil blive målt skrivninger og ikke læsninger.
 
 \begin{frame}{Planlægning}
 \begin{itemize}
-\item Eksperimentet
-\begin{itemize}
-\item Overføre filer af forskellige størrelser lokalt og over netværk.
-\item Filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller.
-\item Filerne består af tilfældigt indhold af de angivne størrelser.
-\item Netværkskabel over trådløst netværk.
-\item Lille netværksserver med harddisk på et hjemmenetværk.
-\end{itemize}
+
 \item Fejlkilder
 \begin{itemize}
 \item Caching
