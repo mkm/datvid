@@ -44,7 +44,7 @@ Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperime
 Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil {\tt sshfs} være tungt grundet kryptering, mens {\tt nfs}, {\tt samba} og lignende benytter en meget gammel og ineffektiv protokol.
 
 \subsubsection{CPU som flaskehals}
-Ved overførsel over netværk kan CPU'en virke som flaskehals. For eksempel ved benyttelse af {\tt sshfs} benyttes CPU-intensiv kryptering som kan begrænse hastigheden af overførslen.
+Ved overførsel over netværk kan CPU'en virke som flaskehals. For eksempel bruger {\tt sshfs} CPU-intensiv kryptering, som kan begrænse hastigheden af overførslen.
 
 \subsubsection{Hardware}
 Harddiske, netværkskort, bundkort og CPU er alle en faktor, som kan have noget at sige for hastighederne.
@@ -60,12 +60,13 @@ Moderne operativsystemer er hele tiden i gang med ting i baggrunden som for ekse
 Båndbredden over netværk er langt højere end båndbredden til en harddisk så hvis man skriver tilstrækkeligt store filer til en disk vil der ikke være forskel på skrivehastigheden mellem en netværksforbundet og en lokal harddisk. Bemærk dog at der vil blive målt skrivninger og ikke læsninger.
 
 % 2
-\section{Implementation}
+\section{Implementering}
 
 % 2.a
 \subsection{Omstændigheder}
 
-Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret ved hjælp af {\tt Samba}.
+
+Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange, hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker og så videre. Derudover vil netværksdisken blive monteret ved hjælp af {\tt Samba}.
 
 \begin{figure}
 	\includegraphics[width=4in]{kode.png}
@@ -75,7 +76,7 @@ Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til
 
 % 2.b
 \subsection{Graf}
-På figur \ref{ploto} ses en graf for, hvor lang tid filerne af forskellige størrelser tager at overføre på henholdsvis en netværksdisk og en lokal disk. Umiddelbart tager det dobbelt så lang tid at overføre over netværk hele vejen igennem. Forholdet mellem lokal og netværk kan ses på figur \ref{plotforhold} som også viser at overførsel over netværk er omkring 2 gange så langsomt.
+På figur \ref{ploto} ses en graf for, hvor lang tid filerne af forskellige størrelser tager at overføre på henholdsvis en netværksdisk og en lokal disk. Umiddelbart tager det dobbelt så lang tid at overføre over netværk hele vejen igennem. Forholdet mellem lokal og netværk kan ses på figur \ref{plotforhold}, som også viser at overførsel over netværk er omkring 2 gange så langsomt. Forholdet udvikler sig rimelig lineært.
 
 \begin{figure}
 	\includegraphics[width=4in]{ploto.png}
@@ -91,16 +92,16 @@ På figur \ref{ploto} ses en graf for, hvor lang tid filerne af forskellige stø
 
 % 2.c
 \subsection{Teseoverlevelse}
-Under antagelse af at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant. Det er svært tænkeligt at endnu større filer vil ændre på dette, da netværksaktivitet alligevel bliver brudt op i pakker, der sendes hver for sig.
+Under antagelse af, at eksperimentet er fornuftigt udført, er konklusionen, at tesen er blevet succesfuldt falsificeret og dermed afvist, da forholdet mellem lokal- og netværksforbundet disk tendenserer til at være konstant. Det er svært tænkeligt, at endnu større filer vil ændre på dette, da netværksaktivitet alligevel bliver brudt op i pakker, der sendes hver for sig.
 
-Antagelsen om eksperimentets holdbarhed er dog ikke helt berettiget. Der er en del usikkerhed, hvoraf kun en delmængde er blevet taget hånd om. Derfor vil det give god mening at undersøge om uønskede faktorer fremprovokerede et falsk negativ. De mest umiddelbare tiltag er at bruge et netværksfilsystem af nyere dato og at finjustere blokstørrelsen til kopiering.
+Antagelsen om eksperimentets holdbarhed er dog ikke helt berettiget. Der er en del usikkerhed, hvoraf kun en delmængde er blevet taget hånd om. Derfor vil det give god mening at undersøge, om uønskede faktorer fremprovokerede et falsk negativ. De mest umiddelbare tiltag er at bruge et netværksfilsystem af nyere dato og at finjustere blokstørrelsen til kopiering.
 
 % 3
 \section{Ræssonnement}
 
 % 3.a
 \subsection{Afstand}
-Forøget afstand mellem disk og maskine har flere konsekvenser. Jo længere afstand, des større sandsynlighed for at en sendt pakke bliver tabt undervejs. Derudover bliver latenstiden højere hvilket kombineret med det tidligere gør at båndbredden bliver meget lavere.
+Forøget afstand mellem disk og maskine har flere konsekvenser. Jo længere afstand, des større sandsynlighed for at en sendt pakke bliver tabt undervejs. Derudover bliver latenstiden højere, hvilket kombineret med det tidligere gør at båndbredden bliver meget lavere.
 
 % 3.b
 \subsection{Netværksudstyr}
@@ -108,14 +109,11 @@ Netværksudstyr, som router og firewall, er alt sammen med til at tilføje yderl
 
 % 3.c
 \subsection{Samba}
-I mellemtiden har vi fundet ud af at {\tt Samba} ikke er særligt optimalt til filoverførsel. Dette har været med til at vise at en overførsel over netværk er meget langsommere end en lokal overførsel.
+
+I mellemtiden har vi fundet ud af, at {\tt Samba} ikke er særligt optimal til filoverførsel. Dette har været med til at vise, at en overførsel over netværk er meget langsommere end en lokal overførsel.
 
 \section{Perspektivering i forhold til artikler}
 
 Stewart er netop frustreret over en mangel på sådan rigid opstillelse af teser og be- eller akræftning af disse. Han ville derfor formentlig acceptere vores grundlæggende metode og kalde det \textit{computer science}, omend vores udførsel og faktiske planlægning af eksperimentet efterlader noget at ønske. Han synes at gå ind for Poppers forudsætninger for videnskab, som kræver formelle og falsificerbare teser og rig mulighed for ekstern afprøvning/bekræftelse. Vores eksperiment er i teorien replikerbart, men i praksis er det ikke tilnærmelsesvist grundigt nok dokumenteret: det brugte hardware er ikke specificeret, og eksempelvis netværk har en masse usikkerhed, der ikke er taget højde for.   
-
-Denning: ``Computing is no longer a science of just the artificial. It is the study of information processes, natural and artificial.''
-
-Denning mener at datalogi er videnskab i modsætning til Stewart.
 
 \end{document}
