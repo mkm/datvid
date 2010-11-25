@@ -18,6 +18,10 @@
 
 
 \subsection{Andre Parametre}
+\subsubsection{Caching}
+I alle moderne operativsystemer opererer filsystemet med en cache, således at en del af maskinens ellers ubenyttede RAM benyttes til at gemme de senest læste filer. Hvis den samme fil læses mange gange, vil det derfor kun generere diskaktivitet første gang, medmindre filen er meget stor, en stor del af den fysiske RAM bruges af kørende programmer eller tilstrækkelig mange filer åbnes i mellemtiden.
+
+Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
 \subsection{Tese}
 
