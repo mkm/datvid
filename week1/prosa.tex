@@ -39,7 +39,7 @@ I alle moderne operativsystemer opererer filsystemet med en cache, således at e
 Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
 \subsubsection{Filsystem}
-Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
+Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil {\tt sshfs} være tungt grundet kryptering, mens {\tt nfs}, {\tt samba} og lignende benytter en meget gammel og ineffektiv protokol.
 
 \subsubsection{CPU som flaskehals}
 Ved overførsel over netværk kan CPU'en virke som flaskehals. For eksempel bruger {\tt sshfs} CPU-intensiv kryptering, som kan begrænse hastigheden af overførslen.
@@ -63,7 +63,8 @@ Båndbredden over netværk er langt højere end båndbredden til en harddisk så
 % 2.a
 \subsection{Omstændigheder}
 
-Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange, hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker og så videre. Derudover vil netværksdisken blive monteret ved hjælp af Samba.
+
+Et Perl-script (se figur \ref{kode}) genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange, hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker og så videre. Derudover vil netværksdisken blive monteret ved hjælp af {\tt Samba}.
 
 \begin{figure}
 	\includegraphics[width=4in]{kode.png}
@@ -106,7 +107,8 @@ Netværksudstyr, som router og firewall, er alt sammen med til at tilføje yderl
 
 % 3.c
 \subsection{Samba}
-I mellemtiden har vi fundet ud af, at Samba ikke er særligt optimal til filoverførsel. Dette har været med til at vise, at en overførsel over netværk er meget langsommere end en lokal overførsel.
+
+I mellemtiden har vi fundet ud af, at {\tt Samba} ikke er særligt optimal til filoverførsel. Dette har været med til at vise, at en overførsel over netværk er meget langsommere end en lokal overførsel.
 
 \section{Perspektivering i forhold til artikler}
 
