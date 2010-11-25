@@ -13,18 +13,22 @@
 
 \maketitle
 
+\newpage
+
 \tableofcontents
+
+\newpage
 
 % 1
 \section{Eksperimentdesign}
 
 % 1.a
 \subsection{Tidsmåling}
-Tid måles med et ur. I forsøget vil tiden blive målt med biblioteket {\tt Time::HiRes} i Perl. Tiden måles fra lige før filens overførsel starter og slutter lige efter. Her kan opstå problemer med buffering da det er muligt at filen ikke er blevet skrevet færdig når kopieringen terminerer.
+\textit{Tid måles med et ur}; I forsøget vil tiden blive målt med biblioteket {\tt Time::HiRes} i Perl. Tiden måles fra lige før filens overførsel starter og slutter lige efter. Her kan opstå problemer med buffering, da det er muligt at filen ikke er blevet skrevet færdig, når kopieringen terminerer.
 
 % 1.b
 \subsection{Tilgangsmønster for disk}
-I eksperimentet bliver der antaget at data læses sekventielt fra disk. Dette er ikke realistisk da der oftest læses mange tilfældige steder på disken samtidigt. Dette burde dog ikke have den store effekt på resultaterne af eksperimentet da der i begge forsøg benyttes harddiske som man må antage opfører sig nogenlunde ens.
+I eksperimentet bliver der antaget, at data læses sekventielt fra disken. Dette er imidlertid ikke realistisk, da der oftest læses mange tilfældige steder på disken samtidigt. Det burde dog ikke have den store effekt på resultaterne af eksperimentet, da der i begge forsøg benyttes harddiske, som man må antage opfører sig nogenlunde ens.
 
 % 1.c
 \subsection{Andre Parametre}
