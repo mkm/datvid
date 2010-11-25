@@ -33,23 +33,20 @@ I alle moderne operativsystemer opererer filsystemet med en cache, således at e
 
 Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
-\begin{itemize}
-\item Filsystem \\
+\subsubsection{Filsystem}
 Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
 
-\item CPU som flaskehals \\
+\subsubsection{CPU som flaskehals}
 Ved overførsel over netværk kan CPU'en agere flaskehals. For eksempel ved benyttelse af {\tt sshfs} benyttes CPU-intensiv kryptering som kan begrænse hastigheden af overførslen.
 
-\item Hardware \\
+\subsubsection{Hardware}
 Harddiske, netværkskort, bundkort og CPU er alle en faktor, som kan have noget at sige for hastighederne.
 
-\item Netværksbelastning \\
+\subsubsection{Netværksbelastning}
 Belastning på netværket vil formindske båndbredden på det givne tidspunkt og derved forværre den eksterne disks overførselstider.
 
-\item Andre processor/forstyrrelser \\
+\subsubsection{Andre processor/forstyrrelser}
 Moderne operativsystemer er hele tiden i gang med ting i baggrunden som for eksempel løbende defragmentering. Alt dette er med til at lave støj i resultaterne.
-
-\end{itemize}
 
 % 1.d
 \subsection{Tese}
@@ -102,7 +99,7 @@ Hvorfor skulle det hjælpe med større filer?
 \subsubsection{ii}
 
 % 3
-\section{Ræssonnering}
+\section{Ræssonnement}
 
 % 3.a
 \subsection{Afstand}
@@ -119,5 +116,7 @@ I mellemtiden har vi fundet ud af at Samba ikke er særligt optimalt til filover
 \section{Perspektivering i forhold til artikler}
 
 Stewart er netop frustreret over en mangel på sådan rigid opstillelse af teser og be- eller akræftning af disse. Han ville derfor formentlig acceptere vores grundlæggende metode og kalde det \textit{computer science}, omend vores udførsel og faktiske planlægning af eksperimentet efterlader noget at ønske. Han synes at gå ind for Poppers forudsætninger for videnskab, som kræver formelle og falsificerbare teser og rig mulighed for ekstern afprøvning/bekræftelse. Vores eksperiment er i teorien replikerbart, men i praksis er det ikke tilnærmelsesvist grundigt nok dokumenteret: det brugte hardware er ikke specificeret, og eksempelvis netværk har en masse usikkerhed, der ikke er taget højde for.   
+
+
 
 \end{document}
