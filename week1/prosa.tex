@@ -15,31 +15,38 @@
 
 \tableofcontents
 
+% 1
 \section{Eksperimentdesign}
 
-Et Perl-script genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret vha. Samba.
-
+% 1.a
 \subsection{Tidsmåling}
 Tid måles med et ur. I forsøget vil tiden blive målt med biblioteket {\tt Time::HiRes} i Perl. Tiden måles fra lige før filens overførsel starter og slutter lige efter. Her kan opstå problemer med buffering da det er muligt at filen ikke er blevet skrevet færdig når kopieringen terminerer.
 
+% 1.b
 \subsection{Realisme}
 
-
+% 1.c
 \subsection{Andre Parametre}
 \subsubsection{Caching}
 I alle moderne operativsystemer opererer filsystemet med en cache, således at en del af maskinens ellers ubenyttede RAM benyttes til at gemme de senest læste filer. Hvis den samme fil læses mange gange, vil det derfor kun generere diskaktivitet første gang, medmindre filen er meget stor, en stor del af den fysiske RAM bruges af kørende programmer eller tilstrækkelig mange filer åbnes i mellemtiden.
 
 Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperimentet til at teste skrivninger, da disse af gode grunde ikke kan caches. Læsningen af den fil, der skal skrives, bliver derimod cachet forudsat, at der foretages en dummy-læsning inden eksperimentet startes --- dermed sikres det at flytning af en fil lokalt kun fremprovokerer en skrivning og ikke en læsning.
 
+% 1.d
 \subsection{Tese}
 Båndbredden over netværk er langt højere end båndbredden til en harddisk så hvis man skriver tilstrækkeligt store filer til en disk vil der ikke være forskel på skrivehastigheden mellem en netværksforbundet og en lokal harddisk. Bemærk dog at der vil blive målt skrivninger og ikke læsninger.
 
+% 2
 \section{Implementation}
 
 \includegraphics[width=4in]{kode.png}
 
+% 2.a
 \subsection{Omstændigheder}
 
+Et Perl-script genererer filer af størrelser fra 5 MB til 120 MB med 5 MB intervaller. Hver fil overføres til destinationen 8 gange hvorefter gennemsnittet for overførslerne bliver beregnet. Dette bliver gjort både lokalt på en computer og til en harddisk på en computer på netværket. De overførte filer består af tilfældigt indhold af de angivne størrelser. Testen over netværk bliver gjort med netværkskabel frem for trådløst netværk for at mindste latenstid, tabte pakker osv. Derudover vil netværksdisken blive monteret vha. Samba.
+
+% 2.b
 \subsection{Graf}
 
 \begin{figure}
@@ -54,18 +61,28 @@ Båndbredden over netværk er langt højere end båndbredden til en harddisk så
 	\label{plotforhold}
 \end{figure}
 
+% 2.c
 \subsection{Teseoverlevelse}
 
+% 2.c.i
 \subsubsection{i}
 
+% 2.c.ii
 \subsubsection{ii}
 
+% 3
 \section{Ræssonnering}
 
+% 3.a
 \subsection{a}
+
+% 3.b
 \subsection{b}
+
+% 3.c
 \subsection{c}
 
+% 4
 \section{4...}
 
 
