@@ -37,11 +37,15 @@ Netop dette er den tekniske begrundelse for, at vi har valgt at ændre eksperime
 Det er også vigtigt hvilket filsystem, der bruges på de forskellige diske, der indgår i forsøget. Som et ekstremt eksempel vil tmpfs slet ikke bruge disken, men vores primære problemer vil forventeligvis være med netværksfilsystemer. For eksempel vil sshfs være tungt grundet kryptering, mens nfs, samba og lignende benytter en meget gammel og ineffektiv protokol.
 
 \subsubsection{CPU som flaskehals}
+Din mor er en flaskehals.
 \subsubsection{Hardware}
+Hardware er en faktor.
 \subsubsection{Netværksbelastning}
+Oh noes!
 \subsubsection{Andre processor/forstyrrelser}
+Usikkerhed ved styresystem med videre.
 \subsubsection{Netværksudstyr (firewall / router)}
-\subsubsection{Afstand}
+Det må da have noget at sige!
 
 % 1.d
 \subsection{Tese}
@@ -63,7 +67,7 @@ Et Perl-script (se figur \ref{ploto}) genererer filer af størrelser fra 5 MB ti
 
 % 2.b
 \subsection{Graf}
-På figur \ref{ploto} ses 
+På figur \ref{ploto} ses en graf for hvor lang tid filerne af forskellige størrelser tager at overføre på henholdsvis en netværksdisk og en lokal disk. Umiddelbart tager det dobbelt så lang tid at overføre over netværk hele vejen igennem. Forholdet mellem lokal og netværk kan ses på figur \ref{plotforhold} som også viser at overførsel over netværk er omkring 2 gange så langsomt.
 
 \begin{figure}
 	\includegraphics[width=4in]{ploto.png}
@@ -98,6 +102,7 @@ Hvorfor skulle det hjælpe med større filer?
 
 % 3.a
 \subsection{a}
+Forøget afstand mellem disk og maskine har flere konsekvenser. Jo længere afstand, des større sandsynlighed for at en sendt pakke bliver tabt undervejs. Derudover bliver latenstiden højere hvilket kombineret med det tidligere gør at båndbredden bliver meget lavere.
 
 % 3.b
 \subsection{b}
