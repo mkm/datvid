@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{verbatim}
+\usepackage[danish]{babel}
 \pagestyle{fancyplain}
 \author{Mikkel Kragh Mathiesen, Jannik Gram, Rune \& Rasmus Abrahams{\tt (son|en)}}
 \title{}
@@ -31,5 +32,151 @@ validation
 \section{Boldsimulator}
 
 \section{Kantfinder}
+
+\subsection*{(3.a)}
+
+\begin{figure}
+	\begin{verbatim}
+		function r = sobel_fold(A, B)
+		    r = 0;
+		    for i=1:3
+		        for j=1:3
+		            r = r + A(i,j)*B(i,j);
+		        end
+		    end
+		end
+	\end{verbatim}
+	\caption{Kildekode til sobel\_fold.m}
+	\label{sobelfold}
+\end{figure}
+
+\begin{figure}
+	\begin{verbatim}
+		function J = edge_detector(I)
+
+		[M, N] = size(I);
+		J = zeros( size(I) );
+
+		Ex = [-1 -2 -1; 0 0 0; 1 2 1];
+		Ey = [-1 0 1; -2 0 2; -1 0 1];
+
+		for i=2:M-1
+		  for j=2:N-1
+
+		    A = zeros(3);
+
+		    A(1,1) = I(i-1,j-1);
+		    A(1,2) = I(i-1,j  );
+		    A(1,3) = I(i-1,j+1);
+
+		    A(2,1) = I(i  ,j-1);
+		    A(2,2) = I(i  ,j  );
+		    A(2,3) = I(i  ,j+1);
+
+		    A(3,1) = I(i+1,j-1);
+		    A(3,2) = I(i+1,j  );
+		    A(3,3) = I(i+1,j+1);
+
+		    val1 = sobel_fold(A, Ex);
+		    val2 = sobel_fold(A, Ey);
+		    J(i,j) = sqrt( val1^2 + val2^2 );
+		  end
+		end
+
+		end
+	\end{verbatim}
+	\caption{Kildekode til edge\_detector.m}
+	\label{edgedetector}
+\end{figure}
+
+Sobeloperationen er implementeret i funktionen på figur \ref{sobelfold}.
+Denne bruges i edge\_detectoren på figur \ref{edgedetector}.
+
+\subsection*{(3.b)}
+
+\begin{itemize}
+	\item Vi har tænkt os at udsætte kant-finderen for et 
+	basistilfælde, for at se om den virker. Dette vil gøres
+	med et meget simpelt billede med et par sorte streger
+	på hvid baggrund, så man tydeligt kan se om den farver
+	de rigtige kanter, som i dette tilfælde er stregerne.
+	Derudover vil vi også teste særtilfælde med billeder 
+	uden kanter og billeder, der har færre end 3 pixels
+	i hver dimension. Vi vil også teste meget store 
+	billeder for at se om programmet også kan håndtere
+	disse.
+	\item 
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp1.jpg}
+		\caption{Billede}
+		\label{ke1}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{kant_eksp1_result.jpg}
+		\caption{Resultat}
+		\label{ke1r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp2.jpg}
+		\caption{Billede}
+		\label{ke2}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{kant_eksp2_result.jpg}
+		\caption{Resultat}
+		\label{ke2r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp3.jpg}
+		\caption{Billede}
+		\label{ke3}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{kant_eksp3_result.jpg}
+		\caption{Resultat}
+		\label{ke3r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp4.jpg}
+		\caption{Billede}
+		\label{ke4}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{kant_eksp4_result.jpg}
+		\caption{Resultat}
+		\label{ke4r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp5.jpg}
+		\caption{Billede}
+		\label{ke5}
+	\end{figure}
+	\begin{figure}
+		\includegraphics[width=4in]{kant_eksp5_result.jpg}
+		\caption{Resultat}
+		\label{ke5r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{kant_eksp6.jpg}
+		\caption{Billede}
+		\label{ke6}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{kant_eksp6_result.jpg}
+		\caption{Resultat}
+		\label{ke6r}
+	\end{figure}
+\end{itemize}
 
 \end{document}
