@@ -128,46 +128,48 @@ Sobeloperationen er implementeret i funktionen på figur~\ref{sobelfold} og brug
 Bemærk at koden ikke tager højde for problemer i forbindelse med gitterets yderste pixels. Således har en kantpixel forholdsmæssigt op til tre færre naboer at sammenligne sig med. Konsekvenserne af dette kan for eksempel ses på figur~\ref{ke1} og figur~\ref{ke1r}, hvor de to sorte linier mod forventning ikke helt når billedrammen.
 
 \subsection*{(3.b)}
-Verifikation
 
-Validering
+\subsubsection*{Verifikation}
 
-%Vi har tænkt os at udsætte kant-finderen for et basistilfælde, for at se om den virker. Dette vil gøres	med et meget simpelt billede med et par sorte streger	på hvid baggrund, så man tydeligt kan se om den farver de rigtige kanter, som i dette tilfælde er stregerne. Derudover vil vi også teste særtilfælde med billeder uden kanter og billeder, der har færre end 3 pixels	i hver dimension. Vi vil også teste meget store billeder for at se om programmet også kan håndtere disse.
+Den diskrete model behøver umiddelbart ikke verificeres, idet afstanden mellem denne og den matematiske model er meget lille og overgangen direkte --- matrixoperationerne lader sig uden videre implementere.
+
+\subsubsection*{Validering}
+Med henblik på valideringen udsættes kantfinderen for en række forhåbentlig dækkende afprøvninger. Først et basistilfælde for at se, om den overhovedet virker efter hensigten; denne afprøvning består af et meget simpelt billede med et par sorte streger på hvid baggrund. Herefter testes diverse særtilfælde ved billeder uden tydelige kanter og billeder med har færre end tre pixels i hver dimension. Til sidst afprøves en slags grænsetilfælde --- her meget store billeder, som programmet også gerne skulle kunne håndtere.
 
 	\begin{figure}
 		\centering
 		\includegraphics[width=3in]{test1.png}
-		\caption{Billede}
+		\caption{En streg --- bemærk at den rører billedrammen både i toppen og i bunden.}
 		\label{ke1}
 	\end{figure}
 	\begin{figure}
 		\centering
 		\includegraphics[width=4in]{test1_result.png}
-		\caption{Resultat}
+		\caption{Kanterne af figur~\ref{ke1}.}
 		\label{ke1r}
 	\end{figure}
 	\begin{figure}
 		\centering
 		\includegraphics[width=3in]{test2.png}
-		\caption{Billede}
+		\caption{Flydende overgang (umiddelbart uden tydelige kanter).}
 		\label{ke2}
 	\end{figure}
 	\begin{figure}
 		\centering
 		\includegraphics[width=4in]{test2_result.png}
-		\caption{Resultat}
+		\caption{Kanterne af figur~\ref{ke2}}
 		\label{ke2r}
 	\end{figure}
 	\begin{figure}
 		\centering
 		\includegraphics[width=3in]{test3.jpg}
-		\caption{Billede}
+		\caption{Jyrki Katajainen --- et ægte grænsetilfælde.}
 		\label{ke3}
 	\end{figure}
 	\begin{figure}
 		\centering
 		\includegraphics[width=4in]{test3_result.jpg}
-		\caption{Resultat}
+		\caption{Kanterne af figur~\ref{ke3}}
 		\label{ke3r}
 	\end{figure}
 
