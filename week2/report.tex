@@ -73,7 +73,7 @@
 		function [x, y, vx, vy] = ball_step(x, y, vx, vy, dt, m, g)
 		    x = x + dt * vx
 		    y = y + dt * vy
-		    vy = vy - (dt * g) / m
+		    vy = vy - dt / (m * g)
 		end
 	\end{verbatim}
 	\caption{ball\_step.m}
@@ -111,6 +111,13 @@ På figur \ref{ballsims} ses ball\_simulate.m.
 \subsection*{(2.c)}
 
 \subsubsection*{1.}
+
+I denne model er der tre parametre, som kan ændres. Der er tid $\Delta T$, masse $m$ og tyngdekraft $g$. Nedenfor ses en række forsøg:
+\begin{itemize}
+	\item Tyngdekraften 0 bør lave en lineær bane for bolden.
+	\item Massen 0 burde ligeså give en lineær bane.
+	\item 
+\end{itemize}
 
 \subsubsection*{2.}
 
