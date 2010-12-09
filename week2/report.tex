@@ -63,7 +63,56 @@
 \end{itemize}
 \end{itemize}
 
-\section{Bold                                 simulator}
+\subsection*{(1.b)}
+% TODO
+
+\section{Boldsimulator}
+
+\begin{figure}
+	\begin{verbatim}
+		function [x, y, vx, vy] = ball_step(x, y, vx, vy, dt, m, g)
+		    x = x + dt * vx
+		    y = y + dt * vy
+		    vy = vy - (dt * g) / m
+		end
+	\end{verbatim}
+	\caption{ball\_step.m}
+	\label{ballsinmyass}
+\end{figure}
+
+\subsection*{(2.a)}
+På figur \ref{ballsinmyass} ses ball\_step.m.
+
+\subsection*{(2.b)}
+\begin{figure}
+	\begin{verbatim}
+		function [X Y] = ball_simulate(x0, y0, vx0, vy0, dt, m, g)
+			x  = x0;
+			y  = y0;
+			vx = vx0;
+			vy = vy0;
+
+			X  = [];
+			Y  = [];
+
+			while y>=0
+			  [x y vx vy] = ball_step(x,y,vx,vy,dt,m,g);
+			  X = [X x];
+			  Y = [Y y];
+			end
+		end
+	\end{verbatim}
+	\caption{ball\_simulate.m}
+	\label{ballsims}
+\end{figure}
+
+På figur \ref{ballsims} ses ball\_simulate.m.
+
+\subsection*{(2.c)}
+
+\subsubsection*{1.}
+
+\subsubsection*{2.}
 
 \section{Kantfinder}
 
