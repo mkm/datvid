@@ -1,0 +1,19 @@
+ noter, yo.
+
+minus real world, mangler empiri etc. ingen ordentlig analyse af det virkelige problem. starter med løsning.
+minus discrete model... ? gættemetode = crap.
+
+real world menneskelig krop
+idea reducering af problemet, led med vinkel og koordinatsystem, hvert led ikke påvirket af resten af systemet, stangmodel, inverst kinetik
+math ligning, funktion, minimering af afstandsmål
+discretisation -- overgang, følger gradienten til gættemodel, implementing math model
+discr mod. beskrivelse af implementering, algo, gættemodellen f(0-)
+
+simulation, verif forudsigelser, running discrete model, no contradictions
+results eksplicitte beskrivelser
+verif valid loop invariants, experts anatomi
+ 
+
+
+
+intet m i første boldligning

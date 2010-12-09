@@ -110,13 +110,13 @@
 	\label{edgedetector}
 \end{figure}
 
-Sobeloperationen er implementeret i funktionen på figur \ref{sobelfold}.
-Denne bruges i edge\_detectoren på figur \ref{edgedetector}.
+Sobeloperationen er implementeret i funktionen på figur~\ref{sobelfold} og bruges i {\tt edge\_detector} på figur~\ref{edgedetector}.
+
+Bemærk at koden ikke tager højde for problemer i forbindelse med gitterets yderste pixels. Således har en kantpixel forholdsmæssigt op til tre færre naboer at sammenligne sig med. Konsekvenserne af dette kan for eksempel ses på figur~\ref{bla} og figur~\ref{bla'}, hvor de to sorte linier mod forventning ikke helt når billedrammen.
 
 \subsection*{(3.b)}
 
-\begin{itemize}
-	\item Vi har tænkt os at udsætte kant-finderen for et 
+Vi har tænkt os at udsætte kant-finderen for et 
 	basistilfælde, for at se om den virker. Dette vil gøres
 	med et meget simpelt billede med et par sorte streger
 	på hvid baggrund, så man tydeligt kan se om den farver
@@ -126,7 +126,6 @@ Denne bruges i edge\_detectoren på figur \ref{edgedetector}.
 	i hver dimension. Vi vil også teste meget store 
 	billeder for at se om programmet også kan håndtere
 	disse.
-	\item 
 	\begin{figure}
 		\centering
 		\includegraphics[width=3in]{test1.png}
@@ -163,7 +162,5 @@ Denne bruges i edge\_detectoren på figur \ref{edgedetector}.
 		\caption{Resultat}
 		\label{ke3r}
 	\end{figure}
-
-\end{itemize}
 
 \end{document}
