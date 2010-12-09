@@ -30,6 +30,8 @@
 %validation
 
 \begin{itemize}
+	\item
+\begin{itemize}
 	\item Boks: "Virkelige" verden \\
 	Artiklen præsenterer problemstillinger fra den virkelige verden omhandlende udfordringen med at afgøre hvordan de forskellige led på en robot eller et menneske skal bevæge sig for at opnå forskellige mål.
 	\item Pil: Idealisering \\
@@ -47,7 +49,18 @@
 	\item Pil: Validering \\
 	NEJ % TODO
 	\item Pil: Verificering \\
-	Artiklen verificerer ikke den diskrete model. Der er flere måder på hvilke dette kunne gøres. En mulig måde er formel verifikation af algoritmen ved brug af for eksempel Hoare-logik, men det praktiske aspekt af dette kan muligvis være for omfattende. En anden mulighed er et udføre dækkende afprøvninger.
+	Artiklen verificerer ikke den diskrete model.
+\end{itemize}
+
+\item
+\begin{itemize}
+	\item Pil: Simulering \\
+	Den diskrete model kunne bruges til at laves konkrete eksempler. Som for eksempel at få modellen til at række ud efter en kop kaffe.
+	\item Pil: Validering \\
+	Ud fra simuleringen vil resultater for hvordan modellen ville tage en kop kaffe. Dennes bevægelser kan efterprøves af et menneske for at se om det er "lovlige" bevægelser.
+	\item Pil: Verificering \\
+	Der er flere måder på hvilke dette kunne gøres. En mulig måde er formel verifikation af algoritmen ved brug af for eksempel Hoare-logik, men det praktiske aspekt af dette kan muligvis være for omfattende. En anden mulighed er et udføre dækkende afprøvninger.
+\end{itemize}
 \end{itemize}
 
 \section{Boldsimulator}
