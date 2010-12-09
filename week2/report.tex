@@ -116,13 +116,18 @@ På figur \ref{ballsims} ses ball\_simulate.m.
 I denne model er der tre parametre, som kan ændres. Der er tid $\Delta T$, masse $m$ og tyngdekraft $g$. Nedenfor ses en række forsøg:
 \begin{itemize}
 	\item Tyngdekraften 0 bør lave en lineær bane for bolden.
-	\item En høj tyngdekraft lim->uendelig skulle gerne lade vores "ball" ligge fast
-	\item "Balls" med forskellig masse skulle gerne bevæge sig samme distance.
+	\item En høj tyngdekraft lim->uendelig skulle gerne lade vores bold ligge fast
+	\item Bolde med forskellig masse skulle gerne bevæge sig samme distance.
 	\item Hvis vi har en høj tidsforskel skulle vi gerne få en mindre præcis måling end med en lav tidsforskel
 \end{itemize}
 
 \subsubsection*{2.}
-Vi har forsøgt at "kaste bolde" med forskellige masse og vi fik forskelligt resultat hvilket betyder at vores matematiske model er forkert. Dette havde vi allerede mistanke om da Newton's anden lov som er opgivet sammen med opgaveformulering ikke er korrekt.
+Med lav tyngdekraft ville vi bruge T/(g*m) og g havde vi sat til 0. Vi kunne derfor ikke gennemføre testen da vi ikke kan dividere med 0.
+Ved meget høj tyngdekraft (vi har dog kun sat den til 9000) blev den aldrig færdig med udregningen hvilket må betyde at bolden ikke faldt til jorden. Dette må betyde at vores matematiske model er forkert. Dette havde vi allerede mistanke om da Newton's anden lov, som er opgivet sammen med opgaveformulering ikke er korrekt.
+Vi har forsøgt at "kaste bolde" med forskellig masse og vi fik forskellige resultater hvilket også betyder at vores matematiske model er forkert.
+Ved forsøget med høj og lav tidsforskel var det tydeligt at se den med høj tidsforskel havde betydeligt mindre antal punkter og kurven var derfor tilpasset og gav et mere upræcist billede.
+
+Vi kan altså konkludere at vores model ikke er korrekt i dette tilfælde og vi er nødt til at få de rigtige formler for at kunne komme skridtet videre og kunne validere.
 
 \section{Kantfinder}
 
