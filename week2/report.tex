@@ -91,20 +91,15 @@ validation
 
 Sobeloperationen er implementeret i funktionen på figur~\ref{sobelfold} og bruges i {\tt edge\_detector} på figur~\ref{edgedetector}.
 
-Bemærk at koden ikke tager højde for problemer i forbindelse med gitterets yderste pixels. Således har en kantpixel forholdsmæssigt op til tre færre naboer at sammenligne sig med. Konsekvenserne af dette kan for eksempel ses på figur~\ref{bla} og figur~\ref{bla'}, hvor de to sorte linier mod forventning ikke helt når billedrammen.
+Bemærk at koden ikke tager højde for problemer i forbindelse med gitterets yderste pixels. Således har en kantpixel forholdsmæssigt op til tre færre naboer at sammenligne sig med. Konsekvenserne af dette kan for eksempel ses på figur~\ref{ke1} og figur~\ref{ke1r}, hvor de to sorte linier mod forventning ikke helt når billedrammen.
 
 \subsection*{(3.b)}
+Verifikation
 
-Vi har tænkt os at udsætte kant-finderen for et 
-	basistilfælde, for at se om den virker. Dette vil gøres
-	med et meget simpelt billede med et par sorte streger
-	på hvid baggrund, så man tydeligt kan se om den farver
-	de rigtige kanter, som i dette tilfælde er stregerne.
-	Derudover vil vi også teste særtilfælde med billeder 
-	uden kanter og billeder, der har færre end 3 pixels
-	i hver dimension. Vi vil også teste meget store 
-	billeder for at se om programmet også kan håndtere
-	disse.
+Validering
+
+%Vi har tænkt os at udsætte kant-finderen for et basistilfælde, for at se om den virker. Dette vil gøres	med et meget simpelt billede med et par sorte streger	på hvid baggrund, så man tydeligt kan se om den farver de rigtige kanter, som i dette tilfælde er stregerne. Derudover vil vi også teste særtilfælde med billeder uden kanter og billeder, der har færre end 3 pixels	i hver dimension. Vi vil også teste meget store billeder for at se om programmet også kan håndtere disse.
+
 	\begin{figure}
 		\centering
 		\includegraphics[width=3in]{test1.png}
