@@ -190,7 +190,7 @@ Bemærk at koden ikke tager højde for problemer i forbindelse med gitterets yde
 Den diskrete model behøver umiddelbart ikke verificeres, idet afstanden mellem denne og den matematiske model er meget lille og overgangen direkte --- matrixoperationerne lader sig uden videre implementere.
 
 \subsubsection*{Validering}
-Med henblik på valideringen udsættes kantfinderen for en række forhåbentlig dækkende afprøvninger. Først et basistilfælde for at se, om den overhovedet virker efter hensigten; denne afprøvning består af et meget simpelt billede med et par sorte streger på hvid baggrund. Herefter testes diverse særtilfælde ved billeder uden tydelige kanter og billeder med har færre end tre pixels i hver dimension. Til sidst afprøves en slags grænsetilfælde --- her meget store billeder, som programmet også gerne skulle kunne håndtere.
+Med henblik på valideringen udsættes kantfinderen for en række forhåbentlig dækkende afprøvninger. Først et basistilfælde for at se, om den overhovedet virker efter hensigten; denne afprøvning består af et meget simpelt billede med et par sorte streger på hvid baggrund [\ref{ke1}, \ref{ke1r}]. Herefter testes diverse særtilfælde ved billeder uden tydelige kanter [\ref{ke2}, \ref{ke2r}] og billeder med har færre end tre pixels i hver dimension [\ref{ke5}, \ref{ke5r}]. Til sidst afprøves en slags grænsetilfælde --- her meget store billeder [\ref{ke4}, \ref{ke4r}], som programmet også gerne skulle kunne håndtere.
 
 	\begin{figure}
 		\centering
@@ -213,7 +213,7 @@ Med henblik på valideringen udsættes kantfinderen for en række forhåbentlig 
 	\begin{figure}
 		\centering
 		\includegraphics[width=4in]{test2_result.png}
-		\caption{Kanterne af figur~\ref{ke2}}
+		\caption{Kanterne af figur~\ref{ke2}.}
 		\label{ke2r}
 	\end{figure}
 	\begin{figure}
@@ -225,8 +225,20 @@ Med henblik på valideringen udsættes kantfinderen for en række forhåbentlig 
 	\begin{figure}
 		\centering
 		\includegraphics[width=4in]{test3_result.jpg}
-		\caption{Kanterne af figur~\ref{ke3}}
+		\caption{Kanterne af figur~\ref{ke3}.}
 		\label{ke3r}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{test4.jpg}
+		\caption{Et billede med høj opløsning.}
+		\label{ke4}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=6in]{test4_result.jpg}
+		\caption{Kanterne af figur~\ref{ke4}.}
+		\label{ke4r}
 	\end{figure}
 
 \end{document}
