@@ -13,23 +13,31 @@
 \begin{document}
 \maketitle
 \section{Turings computermodel}
-Kun digitale maskiner i testen fordi de kan bevises at være universelle turing-maskiner.
-Altså kan en sådan digatal maskine simulere enhver discrete state maskine.
-enhver digital maskine simulere enhver discrete state machine.
+%Kun digitale maskiner i testen fordi de kan bevises at være universelle turing-maskiner.
+%Altså kan en sådan digatal maskine simulere enhver discrete state maskine. Enhver digital maskine simulere enhver discrete state machine.
 
-(han tillader digitale maskiner fordi de er begrænset til at simulere diskrete maskiner)
+%(han tillader digitale maskiner fordi de er begrænset til at simulere diskrete maskiner)
 
-Forskellen: Digitale maskiner i teorien ikke kan være diskrete men i praksis (ikke er diskrete, eller ikke kan være, ikke er) de er ikke diskrete men kan i praksis ses som at være det. fordi man kan forudsige deres tilstand selvom en elektronspænding ikke er præcis så den regner rigtigt med det.
-Den er i sig selv en diskret tilstandsmaskine men samtidig … ideen er at i en virkelig verden er en digital maskine ikke en  diskret tilstandsmaskine men det kan abstraheres væk…
+%Forskellen: Digitale maskiner i teorien ikke kan være diskrete men i praksis (ikke er diskrete, eller ikke kan være, ikke er) de er ikke diskrete men kan i praksis ses som at være det. fordi man kan forudsige deres tilstand selvom en elektronspænding ikke er præcis så den regner rigtigt med det.
+%Den er i sig selv en diskret tilstandsmaskine men samtidig … ideen er at i en virkelig verden er en digital maskine ikke en  diskret tilstandsmaskine men det kan abstraheres væk…
+
+
+I Turing-testing tillades der kun digitale maskiner, da det kan bevises at de er universelle Turing-maskiner. På grund af at digitale maskiner er universelle Turing-maskiner medføre dette også at de kan simulere enhver diskret tilstandsmaskine.
+
+I artiklen beskrives forskellene mellem digitale maskiner og diskrete tilstandsmaskiner som følgende:
+Den digitale maskine er en maskine der kan have et ubegrænset antal tilstande mens den diskrete maskine har et begrænset antal (dog kan dette antal være uendeligt stort). % Modsigelse?
+I teorien er digitale maskiner ikke diskrete, men i praksis kan man dog se dem, som at være det, selvom at den elektriske spænding kan variere. Man kan dog stadig forudsige maskinens tilstand.
+I den virkelige verden er den digitale maskine også en diskret maskine men dette kan man dog abstrahere væk.
 
 \section{Computerhukommelsens betydning}
-Nævnte $10^9$ (for en blind, ikke simulere syn)
-Han gætter at hjernen har $10^{10}$-$10^{15}$ men hypotiserer at til turing-testen er $10^9$ nok.
-Ideen er at hvis hjernenbruger $10^9$ så skal en simulering, der direkte simulerer hjernen bruge samme mængde hukommelse. Det er en måde at klare turing-testen på.
-Neurale netværk
-$10^9$ bytes? neuroner? Det er bits. (binary digits)
-Han tror at det kun er (snarere er) $10^{10}$ end $10^{15}$.
-Det meste af hvilket er brugt på processering af visuelle data.
+Turing mener at hjernen kan indeholde $10^{10}$-$10^{15}$ bits hvoraf meget går til processering af visuelle data. Til Turing-testen er syn og andre sanser ikke nødvendige så  $10^9$ bits (svarende til en blind person) må være tilstrækkeligt til at bestå testen.
+%Han gætter at hjernen har $10^{10}$-$10^{15}$ men hypotiserer at til turing-testen er $10^9$ nok.
+Ideen er at hvis hjernen kan indeholde $10^9$ bits lager så skal en maskine, der direkte simulerer hjernen bruge samme mængde hukommelse.
+
+%Neurale netværk
+%$10^9$ bytes? neuroner? Det er bits. (binary digits)
+%Han tror at det kun er (snarere er) $10^{10}$ end $10^{15}$.
+%Det meste af hvilket er brugt på processering af visuelle data.
 
 \section{Jeres prioritering af indvendingerne mod Turing-testen}
 \subsection{Lady Lovelace}
@@ -40,21 +48,24 @@ Der er generelt mange argumenter, der bygger på, at maskiner har mangler --- so
 På trods af det gode modargument, er det stadig rimelig relevant. Computere nu til dags er så komplekse, at vi på ingen måde kan beregne det næste skridt. Derfor kan den overraske, eksempelvis ved AI i spil og emergent opførsel. Hvis man antager, at vores ideer og opfindelser kommer ned fra gud, så kan manskiner vel ikke det samme. Det giver mening på intuitivt niveau, at computere ikke kan overraske os og i sagens natur er deterministiske og forudsigelige.
 
 \subsection{Nervesystemets kontinuitet}
-Hjernen er kontinuer. Maskinen er diskret. Men hvis maskinen klarer testen er det intet problem.
-Maskinnen vil ikke lide under at den ikke er kontinunær fordi den godt kan … interrogatoren (udsspørgeregenge) (eksaminator) fordi han ikke bruger sin  kontinuæritet. $\pi$. En kontinuær maskine har nogle muligheder som en diskret maskine ikke har.
+%Hjernen er kontinuer. Maskinen er diskret. Men hvis maskinen klarer testen er det intet problem.
+%Maskinnen vil ikke lide under at den ikke er kontinunær fordi den godt kan … interrogatoren (udsspørgeregenge) (eksaminator) fordi han ikke bruger sin  kontinuæritet. $\pi$. En kontinuær maskine har nogle muligheder som en diskret maskine ikke har.
+
+Menneskets hjerne er kontiniuert til forskel for en maskine der i praksis er diskret. I tilfælde af at maskinen klarer testen vil dette betyde at forskellen på hjernen og maskinen ikke er noget problem eftersom at udspørgeren ikke vil komme til at se det kontinuerer eftersom han kun kommer til at se svarene. En kontinuer maskine vil dog have nogle muligheder som en diskret maskine ikke har men dette vil ikke kunne fremgå i testen. 
 
 \subsection{Blockhead indvendingen}
-Du forstår det ikke selvom du har en opslagsliste. Ingen reflektion. 
-Er samtalen begrænset? Tabellem er ikke endelig. Tabel er ikke godt nok. Uendelig stor. Fordi det er et tabelopslag er det ikke symbol på rigtig intelligens. Imitere tænkning.
-Selvom man kan lave en maskine med en så stor tabel at den klarer turing-testen er det ikke udtryk for at maskinen kan tænke selv. Tabelopslag er ikke det samme som intelligens. Turing-testen beviser ingenting.
-Hvis man laver en maskine der "rigtigt" klarer turing-testen vil man også nemt kun skalere den op til 30 minutter.
-Selvom man klarer testen betyder det ikke at man er intelligent.
+%Du forstår det ikke selvom du har en opslagsliste. Ingen reflektion. 
+%Er samtalen begrænset? Tabellem er ikke endelig. Tabel er ikke godt nok. Uendelig stor. Fordi det er et tabelopslag er det ikke symbol på rigtig intelligens. Imitere tænkning.
+%Selvom man kan lave en maskine med en så stor tabel at den klarer turing-testen er det ikke udtryk for at maskinen kan tænke selv. Tabelopslag er ikke det samme som intelligens. Turing-testen beviser ingenting.
+%Hvis man laver en maskine der "rigtigt" klarer turing-testen vil man også nemt kun skalere den op til 30 minutter.
+%Selvom man klarer testen betyder det ikke at man er intelligent.
 
+Blockhead-invendingen går grundlæggende ind og siger at selvom du bruger det, behøver du ikke have en forståelse for det. Der mangler altså reflektion.
+Hvis tabellen teoretisk set er stor nok og samtalen er begrænset nok til at en maskine vil kunne besvare udspørgerens spørgsmål overbevisende nok til at bestå Turing-testen medfører dette ikke at maskinen selv kan tænke eller er intelligent.
+Blockhead-invendingen siger altså ikke noget direkte om maskiner men derimod noget om testen.
+Maskinen kan altså enten være "heldig" eller god til specielle tilfælde men hvis man for eksempel skalerede testen op til at vare for eksempel ti minutter i stedet for fem ville det ikke være sikkert at maskinen stadig kunne bestå, men den ville stadig have klaret testen på de fem minutter og testen er derfor ikke valid ifølge Blockhead-invendingen.
 
 \section{Træning af computere}
-Han mener at man er lige på tærsklen til at kunne simulere konceptet med emotionel adfærd men er langt fra overordnet at kunne simulere den menneskelige hjerne.
-Selv adfærden for meget simple organismer som rundorme med 302 neuroner er stadig ikke succesfuldt blevet emuleret i alle aspekter
-I simulerede neuroner går der kun signaler en vej, men i hjernen går de begge veje. Manglende kompleksitet.
-
+Kringelbach mener, at man er på tærsklen til at kunne simulere emotionel adfærd på et konceptuelt plan og dermed få computere, hvis adfærd er baseret på samme grundlag som den menneskelige hjerne. Til gengæld er der stadig principielle forskelle; for eksempel simuleres neuroner med envejssignaler i modsætning til rigtige neuroner, hvor signalerne går begge veje. Overordnet er der stadig lang vej igen, før realistiske simulationer er mulige --- noget så simpelt som en rundorm med 302 neuroner er ikke simulerbart i dag.
 
 \end{document}
