@@ -21,10 +21,9 @@
 %Forskellen: Digitale maskiner i teorien ikke kan være diskrete men i praksis (ikke er diskrete, eller ikke kan være, ikke er) de er ikke diskrete men kan i praksis ses som at være det. fordi man kan forudsige deres tilstand selvom en elektronspænding ikke er præcis så den regner rigtigt med det.
 %Den er i sig selv en diskret tilstandsmaskine men samtidig … ideen er at i en virkelig verden er en digital maskine ikke en  diskret tilstandsmaskine men det kan abstraheres væk…
 
+I Turing-testen tillades der kun digitale maskiner, da det kan bevises, at de er universelle Turing-maskiner. At digitale maskiner er universelle Turing-maskiner, medfører også, at de kan simulere enhver diskret tilstandsmaskine.
 
-I Turing-testing {\bf tillades der kun digitale maskiner}, da det kan bevises, at de er universelle Turing-maskiner. At digitale maskiner er universelle Turing-maskiner, medfører også, at de kan simulere enhver diskret tilstandsmaskine.
-
-I artiklen beskrives forskellene mellem digitale maskiner og diskrete tilstandsmaskiner som følger: {\bf Den digitale maskine er en maskine, der kan have et ubegrænset antal tilstande, mens den diskrete maskine har et begrænset antal (dog kan dette antal være uendeligt stort)}.
+I artiklen beskrives forskellene mellem digitale maskiner og diskrete tilstandsmaskiner som følger: Den digitale maskine er en maskine, der kan have et ubegrænset antal tilstande, mens den diskrete maskine har et begrænset antal (dog kan dette antal være uendeligt stort).
 
 I teorien er digitale maskiner ikke diskrete, men i praksis kan man dog se dem som at være det, selvom den elektriske spænding kan variere. Man kan dog stadig forudsige maskinens tilstand. I den virkelige verden er den digitale maskine også en diskret maskine, men dette kan man dog abstrahere væk.
 
@@ -39,6 +38,7 @@ Ideen er at hvis hjernen kan indeholde $10^9$ bits lager så skal en maskine, de
 %Det meste af hvilket er brugt på processering af visuelle data.
 
 \section{Jeres prioritering af indvendingerne mod Turing-testen}
+Overordnet set mener vi at alle invendingerne er ret svage. Vi valgte nedenstående indvendinger ikke fordi vi mener at de er særligt brugbare imod Turing-testen, men fordi det er de mindst svage af slagsen. De er altså valgt i mangel af bedre. % HAHAHAHA
 \subsection{Lady Lovelace}
 Argumentet går ud på, at en maskine kun kan det, vi beder dem om at gøre. Turing sammenligner det med spørgsmålet om, hvorvidt en maskine kan overraske os; han argumenterer blandt andet for, at maskiner ofte overrasker ved diverse komplicerede beregninger.
 
@@ -50,8 +50,16 @@ På trods af det gode modargument, er det stadig rimelig relevant. Computere nu 
 %Hjernen er kontinuer. Maskinen er diskret. Men hvis maskinen klarer testen er det intet problem.
 %Maskinnen vil ikke lide under at den ikke er kontinunær fordi den godt kan … interrogatoren (udsspørgeregenge) (eksaminator) fordi han ikke bruger sin  kontinuæritet. $\pi$. En kontinuær maskine har nogle muligheder som en diskret maskine ikke har.
 
-% TODO: afRuneficer og lav en mening
-Menneskets hjerne er kontiniuer til forskel fra en maskine, der i praktiske henseender er diskret. I tilfælde af at maskinen klarer testen, vil dette betyde, at forskellen på hjernen og maskinen ikke er noget problem, da udspørgeren ikke vil komme til at se det kontinuerte --- har ser kun svarene, der er diskrete af natur. En kontinuer maskine vil dog have nogle muligheder, som en diskret maskine ikke har, men dette vil ikke kunne fremgå i testen.
+Indvendingen berør det faktum at menneskets hjerne er kontiniuær i modsætning til en maskine, der med rimelighed kan modelleres som diskret. I denne sammenhæng mener vi det er relevant at se på to fortolkningner af indvendingen.
+
+Den første fortolkning sår tvivl om hvorvidt en maskine vil være i stand til at klare turing-testen idet diskrete maskiner er skarpt mindre kapable end kontinuære maskiner og er derfor ikke i stand til at simulere disse fuldstændigt. Dette er dog ikke et reelt problem for hvis maskinen ikke klarer testen betyder det ikke at den ikke er tænkende så derfor vil skævvridninger til ulempe for maskinen ikke kompromittere testens integritet.
+
+Den anden fortolkning består i at selv hvis maskinen klarer testen ændrer det ikke ved at maskinen ikke er kontinuær. Indvendingen er derfor at hvis en diskret maskine, der som nævnt er skarpt mindre kapabel end en kontinuær hjerne, kan bestå testen, er testen ikke i stand til at skelne testdeltagere af forskellige bevidsthedsniveauer (Bemærk: I denne fortolkning implicit påstås at en kontinuær maskine arbejder på et højere bevidsthedsplan end en diskret maskine).
+
+Denne indvending er efter vores opfattelse væsentlig i den anden fortolkning fordi det er en reel anke imod testens validitet.
+
+%I tilfælde af at maskinen klarer Turing-testen, vil dette betyde, at forskellen på hjernen og maskinen ikke er noget problem, da udspørgeren ikke vil komme til at se det kontinuerte --- han ser kun svarene, der er diskrete af natur.
+%En kontinuer maskine vil dog have nogle muligheder, som en diskret maskine ikke har, men dette vil ikke kunne fremgå af testen.
 
 \subsection{Blockhead-indvendingen}
 %Du forstår det ikke selvom du har en opslagsliste. Ingen reflektion. 
@@ -60,12 +68,12 @@ Menneskets hjerne er kontiniuer til forskel fra en maskine, der i praktiske hens
 %Hvis man laver en maskine der "rigtigt" klarer turing-testen vil man også nemt kun skalere den op til 30 minutter.
 %Selvom man klarer testen betyder det ikke at man er intelligent.
 
-% TODO: add vores mening
-
 Blockhead-invendingen går grundlæggende ind og siger, at selvom du bruger det, behøver du ikke have en forståelse for det. Der mangler altså reflektion.
 Hvis tabellen i Blockhead-invendingens eksempel er stor nok, og samtalen er begrænset nok, til at en maskine vil kunne besvare udspørgerens spørgsmål overbevisende nok til at bestå Turing-testen, medfører dette ikke at maskinen selv kan tænke eller er intelligent. Blockhead-invendingen siger altså ikke noget direkte om maskiner, men derimod noget om testen.
 
 Maskinen kan enten være ``heldig'' eller god til specielle tilfælde, men hvis man skalerede testen op til at vare for eksempel ti minutter i stedet for fem, ville det ikke være sikkert, at maskinen stadig kunne bestå, men den ville stadig have klaret testen på de fem minutter, og testen er derfor ikke valid ifølge Blockhead-invendingen.
+
+Vi mener Blockhead-indvendingen er væsentlig fordi den, ligesom indvendingen om nervesystemets kontinuitet, sætter spørgsmålstegn ved validitet af testen og fordi den som minimum rejser spørgsmålet om hvor lang en minimal Turing-test bør være. For en tilstrækkelig lang Turing-test vil lagerpladsen til tabellen dog være større end antallet af atomer i universet i hvilket fald metoden til at omgås Turing-testen i Blockhead-invendingen ikke længere er anvendelig.
 
 \section{Træning af computere}
 Kringelbach mener, at man er på tærsklen til at kunne simulere emotionel adfærd på et konceptuelt plan og dermed få computere, hvis adfærd er baseret på samme grundlag som den menneskelige hjerne. Til gengæld er der stadig principielle forskelle; for eksempel simuleres neuroner med envejssignaler i modsætning til rigtige neuroner, hvor signalerne går begge veje. Overordnet er der stadig lang vej igen, før realistiske simulationer er mulige --- noget så simpelt som en rundorm med 302 neuroner er ikke simulerbart i dag.
